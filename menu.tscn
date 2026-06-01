@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bkb16gm4f73x5"]
+
+[ext_resource type="Script" uid="uid://ch50cm36ca3ev" path="res://Script/menu.gd" id="1_mae5d"]
+[ext_resource type="Texture2D" uid="uid://bs6cjr3ujv4tl" path="res://Assets Godot Runner/Assets Godot Runner/background.png" id="2_4hy44"]
+[ext_resource type="FontFile" uid="uid://2e561vg1m48f" path="res://Assets Godot Runner/Assets Godot Runner/PressStart2P-Regular.ttf" id="3_ytr4m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l48gv"]
+texture = ExtResource("2_4hy44")
+
+[node name="Menu" type="Control" unique_id=1943876159]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mae5d")
+
+[node name="Fundo" type="Panel" parent="." unique_id=2060400299]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_l48gv")
+
+[node name="Nome" type="Label" parent="." unique_id=914755201]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 101.0
+offset_right = 982.0
+offset_bottom = 237.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 7
+theme_override_fonts/font = ExtResource("3_ytr4m")
+theme_override_font_sizes/font_size = 136
+text = "Runner"
+
+[node name="Botões" type="VBoxContainer" parent="." unique_id=1486846524]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = 23.0
+offset_right = 129.0
+offset_bottom = 143.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="Jogar" type="Button" parent="Botões" unique_id=1414042076]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ytr4m")
+theme_override_font_sizes/font_size = 50
+text = "Jogar"
+
+[node name="Sair" type="Button" parent="Botões" unique_id=563499617]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ytr4m")
+theme_override_font_sizes/font_size = 50
+text = "Sair"
+
+[connection signal="pressed" from="Botões/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="Botões/Sair" to="." method="_on_sair_pressed"]

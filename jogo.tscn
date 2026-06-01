@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c30q2pg4uaasw"]
+
+[node name="Jogo" type="Node2D" unique_id=1032477335]
+
+[node name="Fundo" type="Sprite2D" parent="." unique_id=664587866]
