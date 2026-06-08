@@ -1,5 +1,33 @@
 [gd_scene format=3 uid="uid://c30q2pg4uaasw"]
 
+[ext_resource type="Texture2D" uid="uid://bs6cjr3ujv4tl" path="res://Assets Godot Runner/Assets Godot Runner/background.png" id="1_evvns"]
+[ext_resource type="Texture2D" uid="uid://cttdpgdvfy2xu" path="res://Assets Godot Runner/Assets Godot Runner/foreground.png" id="2_yq54j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ap6j"]
+size = Vector2(1295, 35)
+
 [node name="Jogo" type="Node2D" unique_id=1032477335]
 
 [node name="Fundo" type="Sprite2D" parent="." unique_id=664587866]
+scale = Vector2(3.65, 3.65)
+texture = ExtResource("1_evvns")
+centered = false
+
+[node name="Fundo2" type="Sprite2D" parent="." unique_id=951377494]
+centered = false
+
+[node name="Chão" type="Sprite2D" parent="." unique_id=780510831]
+position = Vector2(0, 574)
+scale = Vector2(3.6562498, 1)
+texture = ExtResource("2_yq54j")
+centered = false
+
+[node name="Chão2" type="Sprite2D" parent="." unique_id=634590183]
+centered = false
+
+[node name="Chão_Fisico" type="StaticBody2D" parent="." unique_id=682890929]
+position = Vector2(15, -1)
+
+[node name="Corpo_chão" type="CollisionShape2D" parent="Chão_Fisico" unique_id=850778945]
+position = Vector2(630, 640)
+shape = SubResource("RectangleShape2D_1ap6j")
