@@ -21,6 +21,10 @@ scale = Vector2(3.65, 3.65)
 texture = ExtResource("1_evvns")
 centered = false
 
+[node name="Meio_azul" type="Sprite2D" parent="." unique_id=906896125]
+
+[node name="Meio_azul2" type="Sprite2D" parent="." unique_id=2001963810]
+
 [node name="Chão" type="Sprite2D" parent="." unique_id=780510831]
 position = Vector2(0, 574)
 scale = Vector2(3.656, 2)

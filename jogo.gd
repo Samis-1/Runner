@@ -6,15 +6,22 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
-	$Fundo.position.x -= velocidade*delta
-	$Fundo2.position.x -= velocidade*delta
+	$Fundo.position.x -= velocidade*delta*0.05
+	$Fundo2.position.x -= velocidade*delta*0.05
 	if $Fundo.position.x < -1152:
 		$Fundo.position.x = 1152
 	if $Fundo2.position.x < -1152:
 		$Fundo2.position.x = 1152
 	
-	$Chão.position.x -= velocidade*delta
-	$Chão2.position.x -= velocidade*delta
+	$Meio_azul.position.x -= velocidade*delta*0.5
+	$Meio_azul2.position.x -= velocidade*delta*1
+	if $Meio_azul.position.x < -1152:
+		$Meio_azul.position.x = 1152
+	if $Meio_azul2.position.x < -1152:
+		$Meio_azul2.position.x = 1152
+	
+	$Chão.position.x -= velocidade*delta*2
+	$Chão2.position.x -= velocidade*delta*2
 	if $Chão.position.x < -1152:
 		$Chão.position.x = 1152
 	if $Chão2.position.x < -1152:
