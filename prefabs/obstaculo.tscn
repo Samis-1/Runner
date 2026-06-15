@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dgfqli6bmfmlh"]
+
+[ext_resource type="Texture2D" uid="uid://e6ujly2t4mxu" path="res://Assets Godot Runner/Assets Godot Runner/thorn.png" id="1_kh81v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b15wn"]
+size = Vector2(40.264027, 12.260724)
+
+[node name="Area2D" type="Area2D" unique_id=845693027]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=626211679]
+position = Vector2(24, 24)
+scale = Vector2(4, 4)
+texture = ExtResource("1_kh81v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=54423018]
+position = Vector2(22.499998, 47.2875)
+scale = Vector2(1.515, 1.515)
+shape = SubResource("RectangleShape2D_b15wn")
